@@ -1,3 +1,6 @@
+<img width="992" height="751" alt="image" src="https://github.com/user-attachments/assets/4d40cb4f-a7b4-45ea-9e3d-8dd020e9303e" />
+
+
 # Module Federation
 
 A **microfrontend architecture** demonstration: an Admin Dashboard where the host application provides the shell (navigation, layout) and remote microfrontends provide independent feature modules (Analytics, User Management, Notifications, Settings).
