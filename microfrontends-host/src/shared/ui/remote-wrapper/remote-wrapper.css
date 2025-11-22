@@ -1,0 +1,112 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.remote-wrapper {
+  position: relative;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.remote-indicator {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(78, 202, 255, 0.1);
+  border: 1px solid #4ecaff;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  color: #4ecaff;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remote-indicator:hover {
+  background-color: rgba(78, 202, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.remote-indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4ecaff;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 1rem;
+  border: 3px solid #4ecaff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.debug-panel {
+  position: absolute;
+  top: 2rem;
+  right: 0.5rem;
+  z-index: 20;
+  background-color: #1a1a1a;
+  color: #4ecaff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  border: 1px solid #4ecaff;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.debug-panel-title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #4ecaff;
+}
+
+.debug-panel-label {
+  color: #999;
+  margin-bottom: 0.25rem;
+  font-size: 0.7rem;
+}
+
+.debug-panel-value {
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+.debug-panel-source {
+  color: #51cf66;
+}
+
